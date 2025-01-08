@@ -1,0 +1,864 @@
+/*
+
+HALF Index (Land Use) - Alexander et al. (2016) – processed by Our World in Data. “HALF Index (habitable land area) (Alexander et al. (2016))” [dataset]. HALF Index (Land Use) - Alexander et al. (2016) [original data].
+*/
+
+// HALF Index (Land Use) - Alexander et al. (2016) – processed by Our World in Data
+// https://ourworldindata.org/grapher/share-of-global-habitable-land-needed-for-agriculture-if-everyone-had-the-diet-of?tab=table
+{
+    "AFG": {
+        "name": "Afghanistan",
+        "year": "2011",
+        "index": 33.6
+    },
+    "ALB": {
+        "name": "Albania",
+        "year": "2011",
+        "index": 91.1
+    },
+    "DZA": {
+        "name": "Algeria",
+        "year": "2011",
+        "index": 49.0
+    },
+    "AGO": {
+        "name": "Angola",
+        "year": "2011",
+        "index": 29.7
+    },
+    "ATG": {
+        "name": "Antigua and Barbuda",
+        "year": "2011",
+        "index": 64.9
+    },
+    "ARG": {
+        "name": "Argentina",
+        "year": "2011",
+        "index": 161.8
+    },
+    "ARM": {
+        "name": "Armenia",
+        "year": "2011",
+        "index": 79.6
+    },
+    "AUS": {
+        "name": "Australia",
+        "year": "2011",
+        "index": 158.0
+    },
+    "AUT": {
+        "name": "Austria",
+        "year": "2011",
+        "index": 112.3
+    },
+    "AZE": {
+        "name": "Azerbaijan",
+        "year": "2011",
+        "index": 68.3
+    },
+    "BHS": {
+        "name": "Bahamas",
+        "year": "2011",
+        "index": 71.6
+    },
+    "BGD": {
+        "name": "Bangladesh",
+        "year": "2011",
+        "index": 14.9
+    },
+    "BRB": {
+        "name": "Barbados",
+        "year": "2011",
+        "index": 67.0
+    },
+    "BLR": {
+        "name": "Belarus",
+        "year": "2011",
+        "index": 81.5
+    },
+    "BEL": {
+        "name": "Belgium",
+        "year": "2011",
+        "index": 104.5
+    },
+    "BLZ": {
+        "name": "Belize",
+        "year": "2011",
+        "index": 37.7
+    },
+    "BEN": {
+        "name": "Benin",
+        "year": "2011",
+        "index": 22.1
+    },
+    "BMU": {
+        "name": "Bermuda",
+        "year": "2011",
+        "index": 156.0
+    },
+    "BOL": {
+        "name": "Bolivia",
+        "year": "2011",
+        "index": 70.5
+    },
+    "BIH": {
+        "name": "Bosnia and Herzegovina",
+        "year": "2011",
+        "index": 53.3
+    },
+    "BWA": {
+        "name": "Botswana",
+        "year": "2011",
+        "index": 56.1
+    },
+    "BRA": {
+        "name": "Brazil",
+        "year": "2011",
+        "index": 124.2
+    },
+    "BRN": {
+        "name": "Brunei",
+        "year": "2011",
+        "index": 56.8
+    },
+    "BGR": {
+        "name": "Bulgaria",
+        "year": "2011",
+        "index": 46.9
+    },
+    "BFA": {
+        "name": "Burkina Faso",
+        "year": "2011",
+        "index": 47.4
+    },
+    "": {
+        "name": "Cabo Verde",
+        "year": "2011",
+        "index": 39.5
+    },
+    "KHM": {
+        "name": "Cambodia",
+        "year": "2011",
+        "index": 22.6
+    },
+    "CMR": {
+        "name": "Cameroon",
+        "year": "2011",
+        "index": 35.4
+    },
+    "CAN": {
+        "name": "Canada",
+        "year": "2011",
+        "index": 129.8
+    },
+    "CAF": {
+        "name": "Central African Republic",
+        "year": "2011",
+        "index": 74.5
+    },
+    "TCD": {
+        "name": "Chad",
+        "year": "2011",
+        "index": 39.7
+    },
+    "CHL": {
+        "name": "Chile",
+        "year": "2011",
+        "index": 76.8
+    },
+    "CHN": {
+        "name": "China",
+        "year": "2011",
+        "index": 40.2
+    },
+    "COL": {
+        "name": "Colombia",
+        "year": "2011",
+        "index": 63.1
+    },
+    "COG": {
+        "name": "Congo",
+        "year": "2011",
+        "index": 30.2
+    },
+    "CRI": {
+        "name": "Costa Rica",
+        "year": "2011",
+        "index": 75.2
+    },
+    "CIV": {
+        "name": "Cote d'Ivoire",
+        "year": "2011",
+        "index": 27.4
+    },
+    "HRV": {
+        "name": "Croatia",
+        "year": "2011",
+        "index": 68.0
+    },
+    "CUB": {
+        "name": "Cuba",
+        "year": "2011",
+        "index": 49.6
+    },
+    "CYP": {
+        "name": "Cyprus",
+        "year": "2011",
+        "index": 56.1
+    },
+    "CZE": {
+        "name": "Czechia",
+        "year": "2011",
+        "index": 73.8
+    },
+    "DNK": {
+        "name": "Denmark",
+        "year": "2011",
+        "index": 136.1
+    },
+    "DJI": {
+        "name": "Djibouti",
+        "year": "2011",
+        "index": 41.0
+    },
+    "DMA": {
+        "name": "Dominica",
+        "year": "2011",
+        "index": 57.2
+    },
+    "DOM": {
+        "name": "Dominican Republic",
+        "year": "2011",
+        "index": 45.5
+    },
+    "TLS": {
+        "name": "East Timor",
+        "year": "2011",
+        "index": 39.6
+    },
+    "ECU": {
+        "name": "Ecuador",
+        "year": "2011",
+        "index": 75.4
+    },
+    "EGY": {
+        "name": "Egypt",
+        "year": "2011",
+        "index": 53.4
+    },
+    "SLV": {
+        "name": "El Salvador",
+        "year": "2011",
+        "index": 41.2
+    },
+    "EST": {
+        "name": "Estonia",
+        "year": "2011",
+        "index": 74.5
+    },
+    "SWZ": {
+        "name": "Eswatini",
+        "year": "2011",
+        "index": 50.2
+    },
+    "ETH": {
+        "name": "Ethiopia",
+        "year": "2011",
+        "index": 26.9
+    },
+    "FJI": {
+        "name": "Fiji",
+        "year": "2011",
+        "index": 55.3
+    },
+    "FIN": {
+        "name": "Finland",
+        "year": "2011",
+        "index": 108.4
+    },
+    "FRA": {
+        "name": "France",
+        "year": "2011",
+        "index": 122.1
+    },
+    "PYF": {
+        "name": "French Polynesia",
+        "year": "2011",
+        "index": 121.8
+    },
+    "GAB": {
+        "name": "Gabon",
+        "year": "2011",
+        "index": 58.7
+    },
+    "GMB": {
+        "name": "Gambia",
+        "year": "2011",
+        "index": 28.0
+    },
+    "GEO": {
+        "name": "Georgia",
+        "year": "2011",
+        "index": 44.2
+    },
+    "DEU": {
+        "name": "Germany",
+        "year": "2011",
+        "index": 98.7
+    },
+    "GHA": {
+        "name": "Ghana",
+        "year": "2011",
+        "index": 26.3
+    },
+    "GRC": {
+        "name": "Greece",
+        "year": "2011",
+        "index": 114.2
+    },
+    "GRD": {
+        "name": "Grenada",
+        "year": "2011",
+        "index": 42.0
+    },
+    "GTM": {
+        "name": "Guatemala",
+        "year": "2011",
+        "index": 30.2
+    },
+    "GIN": {
+        "name": "Guinea",
+        "year": "2011",
+        "index": 23.9
+    },
+    "GNB": {
+        "name": "Guinea-Bissau",
+        "year": "2011",
+        "index": 23.6
+    },
+    "GUY": {
+        "name": "Guyana",
+        "year": "2011",
+        "index": 30.1
+    },
+    "HTI": {
+        "name": "Haiti",
+        "year": "2011",
+        "index": 24.0
+    },
+    "HND": {
+        "name": "Honduras",
+        "year": "2011",
+        "index": 39.4
+    },
+    "HUN": {
+        "name": "Hungary",
+        "year": "2011",
+        "index": 62.1
+    },
+    "ISL": {
+        "name": "Iceland",
+        "year": "2011",
+        "index": 119.7
+    },
+    "IND": {
+        "name": "India",
+        "year": "2011",
+        "index": 22.2
+    },
+    "IDN": {
+        "name": "Indonesia",
+        "year": "2011",
+        "index": 18.3
+    },
+    "IRN": {
+        "name": "Iran",
+        "year": "2011",
+        "index": 41.6
+    },
+    "IRQ": {
+        "name": "Iraq",
+        "year": "2011",
+        "index": 20.9
+    },
+    "IRL": {
+        "name": "Ireland",
+        "year": "2011",
+        "index": 105.8
+    },
+    "ISR": {
+        "name": "Israel",
+        "year": "2011",
+        "index": 104.5
+    },
+    "ITA": {
+        "name": "Italy",
+        "year": "2011",
+        "index": 116.6
+    },
+    "JAM": {
+        "name": "Jamaica",
+        "year": "2011",
+        "index": 37.6
+    },
+    "JPN": {
+        "name": "Japan",
+        "year": "2011",
+        "index": 42.7
+    },
+    "JOR": {
+        "name": "Jordan",
+        "year": "2011",
+        "index": 46.5
+    },
+    "KAZ": {
+        "name": "Kazakhstan",
+        "year": "2011",
+        "index": 108.5
+    },
+    "KEN": {
+        "name": "Kenya",
+        "year": "2011",
+        "index": 48.8
+    },
+    "KIR": {
+        "name": "Kiribati",
+        "year": "2011",
+        "index": 29.1
+    },
+    "KWT": {
+        "name": "Kuwait",
+        "year": "2011",
+        "index": 66.7
+    },
+    "KGZ": {
+        "name": "Kyrgyzstan",
+        "year": "2011",
+        "index": 75.2
+    },
+    "LAO": {
+        "name": "Laos",
+        "year": "2011",
+        "index": 30.0
+    },
+    "LVA": {
+        "name": "Latvia",
+        "year": "2011",
+        "index": 70.7
+    },
+    "LBN": {
+        "name": "Lebanon",
+        "year": "2011",
+        "index": 68.3
+    },
+    "LSO": {
+        "name": "Lesotho",
+        "year": "2011",
+        "index": 36.7
+    },
+    "LBR": {
+        "name": "Liberia",
+        "year": "2011",
+        "index": 13.4
+    },
+    "LTU": {
+        "name": "Lithuania",
+        "year": "2011",
+        "index": 69.4
+    },
+    "LUX": {
+        "name": "Luxembourg",
+        "year": "2011",
+        "index": 126.5
+    },
+    "MDG": {
+        "name": "Madagascar",
+        "year": "2011",
+        "index": 29.9
+    },
+    "MWI": {
+        "name": "Malawi",
+        "year": "2011",
+        "index": 18.1
+    },
+    "MYS": {
+        "name": "Malaysia",
+        "year": "2011",
+        "index": 32.0
+    },
+    "MDV": {
+        "name": "Maldives",
+        "year": "2011",
+        "index": 38.9
+    },
+    "MLI": {
+        "name": "Mali",
+        "year": "2011",
+        "index": 62.2
+    },
+    "MLT": {
+        "name": "Malta",
+        "year": "2011",
+        "index": 99.3
+    },
+    "MRT": {
+        "name": "Mauritania",
+        "year": "2011",
+        "index": 66.2
+    },
+    "MUS": {
+        "name": "Mauritius",
+        "year": "2011",
+        "index": 45.6
+    },
+    "MEX": {
+        "name": "Mexico",
+        "year": "2011",
+        "index": 65.3
+    },
+    "MDA": {
+        "name": "Moldova",
+        "year": "2011",
+        "index": 29.2
+    },
+    "MNG": {
+        "name": "Mongolia",
+        "year": "2011",
+        "index": 139.8
+    },
+    "MNE": {
+        "name": "Montenegro",
+        "year": "2011",
+        "index": 76.9
+    },
+    "MAR": {
+        "name": "Morocco",
+        "year": "2011",
+        "index": 45.4
+    },
+    "MOZ": {
+        "name": "Mozambique",
+        "year": "2011",
+        "index": 13.3
+    },
+    "MMR": {
+        "name": "Myanmar",
+        "year": "2011",
+        "index": 30.7
+    },
+    "NAM": {
+        "name": "Namibia",
+        "year": "2011",
+        "index": 53.9
+    },
+    "NPL": {
+        "name": "Nepal",
+        "year": "2011",
+        "index": 37.5
+    },
+    "NLD": {
+        "name": "Netherlands",
+        "year": "2011",
+        "index": 99.9
+    },
+    "NCL": {
+        "name": "New Caledonia",
+        "year": "2011",
+        "index": 77.9
+    },
+    "NZL": {
+        "name": "New Zealand",
+        "year": "2011",
+        "index": 191.2
+    },
+    "NIC": {
+        "name": "Nicaragua",
+        "year": "2011",
+        "index": 31.8
+    },
+    "NER": {
+        "name": "Niger",
+        "year": "2011",
+        "index": 61.7
+    },
+    "NGA": {
+        "name": "Nigeria",
+        "year": "2011",
+        "index": 25.7
+    },
+    "PRK": {
+        "name": "North Korea",
+        "year": "2011",
+        "index": 21.2
+    },
+    "MKD": {
+        "name": "North Macedonia",
+        "year": "2011",
+        "index": 55.3
+    },
+    "NOR": {
+        "name": "Norway",
+        "year": "2011",
+        "index": 106.8
+    },
+    "OMN": {
+        "name": "Oman",
+        "year": "2011",
+        "index": 75.2
+    },
+    "PAK": {
+        "name": "Pakistan",
+        "year": "2011",
+        "index": 50.2
+    },
+    "PAN": {
+        "name": "Panama",
+        "year": "2011",
+        "index": 75.7
+    },
+    "PRY": {
+        "name": "Paraguay",
+        "year": "2011",
+        "index": 70.4
+    },
+    "PER": {
+        "name": "Peru",
+        "year": "2011",
+        "index": 28.5
+    },
+    "PHL": {
+        "name": "Philippines",
+        "year": "2011",
+        "index": 27.9
+    },
+    "POL": {
+        "name": "Poland",
+        "year": "2011",
+        "index": 56.4
+    },
+    "PRT": {
+        "name": "Portugal",
+        "year": "2011",
+        "index": 96.1
+    },
+    "ROU": {
+        "name": "Romania",
+        "year": "2011",
+        "index": 65.2
+    },
+    "RUS": {
+        "name": "Russia",
+        "year": "2011",
+        "index": 81.7
+    },
+    "RWA": {
+        "name": "Rwanda",
+        "year": "2011",
+        "index": 26.7
+    },
+    "KNA": {
+        "name": "Saint Kitts and Nevis",
+        "year": "2011",
+        "index": 56.2
+    },
+    "LCA": {
+        "name": "Saint Lucia",
+        "year": "2011",
+        "index": 44.8
+    },
+    "VCT": {
+        "name": "Saint Vincent and the Grenadines",
+        "year": "2011",
+        "index": 56.4
+    },
+    "WSM": {
+        "name": "Samoa",
+        "year": "2011",
+        "index": 52.7
+    },
+    "STP": {
+        "name": "Sao Tome and Principe",
+        "year": "2011",
+        "index": 26.8
+    },
+    "SAU": {
+        "name": "Saudi Arabia",
+        "year": "2011",
+        "index": 46.9
+    },
+    "SEN": {
+        "name": "Senegal",
+        "year": "2011",
+        "index": 32.1
+    },
+    "SRB": {
+        "name": "Serbia",
+        "year": "2011",
+        "index": 55.2
+    },
+    "SLE": {
+        "name": "Sierra Leone",
+        "year": "2011",
+        "index": 18.0
+    },
+    "SVK": {
+        "name": "Slovakia",
+        "year": "2011",
+        "index": 55.8
+    },
+    "SVN": {
+        "name": "Slovenia",
+        "year": "2011",
+        "index": 100.3
+    },
+    "SLB": {
+        "name": "Solomon Islands",
+        "year": "2011",
+        "index": 26.7
+    },
+    "ZAF": {
+        "name": "South Africa",
+        "year": "2011",
+        "index": 60.3
+    },
+    "KOR": {
+        "name": "South Korea",
+        "year": "2011",
+        "index": 58.2
+    },
+    "ESP": {
+        "name": "Spain",
+        "year": "2011",
+        "index": 79.4
+    },
+    "LKA": {
+        "name": "Sri Lanka",
+        "year": "2011",
+        "index": 16.2
+    },
+    "SUR": {
+        "name": "Suriname",
+        "year": "2011",
+        "index": 45.7
+    },
+    "SWE": {
+        "name": "Sweden",
+        "year": "2011",
+        "index": 126.4
+    },
+    "CHE": {
+        "name": "Switzerland",
+        "year": "2011",
+        "index": 111.5
+    },
+    "TJK": {
+        "name": "Tajikistan",
+        "year": "2011",
+        "index": 29.2
+    },
+    "TZA": {
+        "name": "Tanzania",
+        "year": "2011",
+        "index": 29.6
+    },
+    "THA": {
+        "name": "Thailand",
+        "year": "2011",
+        "index": 20.9
+    },
+    "TGO": {
+        "name": "Togo",
+        "year": "2011",
+        "index": 17.7
+    },
+    "TTO": {
+        "name": "Trinidad and Tobago",
+        "year": "2011",
+        "index": 40.9
+    },
+    "TUN": {
+        "name": "Tunisia",
+        "year": "2011",
+        "index": 46.8
+    },
+    "TUR": {
+        "name": "Turkey",
+        "year": "2011",
+        "index": 60.9
+    },
+    "TKM": {
+        "name": "Turkmenistan",
+        "year": "2011",
+        "index": 124.0
+    },
+    "UGA": {
+        "name": "Uganda",
+        "year": "2011",
+        "index": 31.5
+    },
+    "UKR": {
+        "name": "Ukraine",
+        "year": "2011",
+        "index": 52.5
+    },
+    "ARE": {
+        "name": "United Arab Emirates",
+        "year": "2011",
+        "index": 55.0
+    },
+    "GBR": {
+        "name": "United Kingdom",
+        "year": "2011",
+        "index": 94.66197183
+    },
+    "USA": {
+        "name": "United States",
+        "year": "2011",
+        "index": 137.6478873
+    },
+    "URY": {
+        "name": "Uruguay",
+        "year": "2011",
+        "index": 104.6
+    },
+    "UZB": {
+        "name": "Uzbekistan",
+        "year": "2011",
+        "index": 92.6
+    },
+    "VUT": {
+        "name": "Vanuatu",
+        "year": "2011",
+        "index": 39.5
+    },
+    "VEN": {
+        "name": "Venezuela",
+        "year": "2011",
+        "index": 88.0
+    },
+    "VNM": {
+        "name": "Vietnam",
+        "year": "2011",
+        "index": 36.9
+    },
+    "OWID_WRL": {
+        "name": "World",
+        "year": "2011",
+        "index": 49.5
+    },
+    "YEM": {
+        "name": "Yemen",
+        "year": "2011",
+        "index": 28.1
+    },
+    "ZMB": {
+        "name": "Zambia",
+        "year": "2011",
+        "index": 22.5
+    },
+    "ZWE": {
+        "name": "Zimbabwe",
+        "year": "2011",
+        "index": 33.0
+    }
+}
