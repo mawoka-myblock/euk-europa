@@ -1,10 +1,14 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import FoodData from '$lib/data/foods.json';
+	import { Chart, BarController, BarElement, CategoryScale, LinearScale } from 'chart.js';
 	import BrownButton from '$lib/components/BrownButton.svelte';
+	import { onMount } from 'svelte';
 	let { data }: { data: PageData } = $props();
 
 	let food_to_add = $state('');
+	let chart_canvas: HTMLCanvasElement | undefined = $state();
+	let chart: Chart<'bar', number[], string> | undefined = undefined;
 
 	type FoodDataType = {
 		[k: string]: {
@@ -77,7 +81,17 @@
 				change_amount_of_data.grams *
 				change_amount_of_data.period_multiplier) /
 			1000;
+		if (chart) {
+			if (!chart.data.labels?.includes(change_amount_of)) chart.data.labels?.push(change_amount_of);
+			chart.data.datasets[0].data[chart.data.labels.indexOf(change_amount_of)] =
+				selected_food[change_amount_of].kilo_per_year;
+			chart.update()
+		}
 		console.log(selected_food[change_amount_of].kilo_per_year);
+	});
+
+	onMount(() => {
+		Chart.register(BarController, BarElement, CategoryScale, LinearScale);
 	});
 
 	const close_change_amount_of = () => {
@@ -89,6 +103,24 @@
 			frequency: 0,
 			period_multiplier: 1
 		};
+	};
+
+	const render_chart = () => {
+		chart = new Chart(chart_canvas, {
+			type: 'bar',
+			data: {
+				labels: Object.keys(selected_food),
+				datasets: [
+					{
+						label: '# of kg',
+						borderWidth: 1,
+						data: Object.values(selected_food).map((d) => {
+							return d.kilo_per_year;
+						})
+					}
+				]
+			}
+		});
 	};
 </script>
 
@@ -118,14 +150,17 @@
 			</select>
 			<BrownButton on:click={add_food}>Add!</BrownButton>
 		</div>
+		<BrownButton on:click={render_chart}>Update chart</BrownButton>
 	</div>
-	<div></div>
+	<div>
+		<canvas bind:this={chart_canvas}></canvas>
+	</div>
 </div>
 
 {#if change_amount_of}
 	<div class="fixed left-0 top-0 z-20 flex h-screen w-screen bg-black/60">
 		<div class="m-10 flex w-full flex-col rounded-lg bg-white/80 p-2 lg:m-auto lg:h-2/3 lg:w-1/3">
-			<h2 class="marck-script mx-auto text-5xl">Change the amount of {change_amount_of}</h2>
+			<h2 class="marck-script mx-auto text-5xl text-center">Change the amount of {change_amount_of}</h2>
 			<p class="mx-auto mt-1">Set how much {change_amount_of} you eat!</p>
 			<div class="flex w-full flex-row place-items-center align-middle">
 				I eat <span
@@ -144,10 +179,10 @@
 					class="w-24 border-0 bg-transparent p-0 px-2 focus:outline-none"
 					bind:value={change_amount_of_data.period_multiplier}
 				>
-					<option value={365}>Day</option>
-					<option value={52}>Week</option>
-					<option value={12}>Month</option>
-					<option value={1}>Year</option>
+					<option value={365}>Days</option>
+					<option value={52}>Weeks</option>
+					<option value={12}>Months</option>
+					<option value={1}>Years</option>
 				</select>
 			</div>
 			<div>
