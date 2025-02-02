@@ -1,230 +1,306 @@
 {
-    "Apples": {
-      "water_per_kg": 180.1,
-      "ghg_emissions_per_kg": 0.43,
-      "land_use_per_kg": 0.63,
-      "scarcity_weighted_water_use_per_kg": 12948.6
-    },
-    "Bananas": {
-      "water_per_kg": 114.5,
-      "ghg_emissions_per_kg": 0.86,
-      "land_use_per_kg": 1.93,
-      "scarcity_weighted_water_use_per_kg": 661.9
-    },
-    "Barley": {
-      "water_per_kg": 17.1,
-      "ghg_emissions_per_kg": 1.18,
-      "land_use_per_kg": 1.11,
-      "scarcity_weighted_water_use_per_kg": 696.4
-    },
-    "Beef (beef herd)": {
-      "water_per_kg": 1451.2,
-      "ghg_emissions_per_kg": 99.48,
-      "land_use_per_kg": 326.21,
-      "scarcity_weighted_water_use_per_kg": 34732.5
-    },
-    "Beef (dairy herd)": {
-      "water_per_kg": 2714.3,
-      "ghg_emissions_per_kg": 33.3,
-      "land_use_per_kg": 43.24,
-      "scarcity_weighted_water_use_per_kg": 119805.2
-    },
-    "Beet Sugar": {
-      "water_per_kg": 217.7,
-      "ghg_emissions_per_kg": 1.81,
-      "land_use_per_kg": 1.83,
-      "scarcity_weighted_water_use_per_kg": 9493.3
-    },
-    "Berries & Grapes": {
-      "water_per_kg": 419.6,
-      "ghg_emissions_per_kg": 1.53,
-      "land_use_per_kg": 2.41,
-      "scarcity_weighted_water_use_per_kg": 21162.1
-    },
-    "Brassicas": {
-      "water_per_kg": 119.4,
-      "ghg_emissions_per_kg": 0.51,
-      "land_use_per_kg": 0.55,
-      "scarcity_weighted_water_use_per_kg": 8455.1
-    },
-    "Cane Sugar": {
-      "water_per_kg": 620.1,
-      "ghg_emissions_per_kg": 3.2,
-      "land_use_per_kg": 2.04,
-      "scarcity_weighted_water_use_per_kg": 16438.6
-    },
-    "Cassava": {
-      "water_per_kg": 0,
-      "ghg_emissions_per_kg": 1.32,
-      "land_use_per_kg": 1.81,
-      "scarcity_weighted_water_use_per_kg": 0
-    },
-    "Cheese": {
-      "water_per_kg": 5605.2,
-      "ghg_emissions_per_kg": 23.88,
-      "land_use_per_kg": 87.79,
-      "scarcity_weighted_water_use_per_kg": 180850.6
-    },
-    "Citrus Fruit": {
-      "water_per_kg": 82.7,
-      "ghg_emissions_per_kg": 0.39,
-      "land_use_per_kg": 0.86,
-      "scarcity_weighted_water_use_per_kg": 4662.7
-    },
-    "Coffee": {
-      "water_per_kg": 25.9,
-      "ghg_emissions_per_kg": 28.53,
-      "land_use_per_kg": 21.62,
-      "scarcity_weighted_water_use_per_kg": 337
-    },
-    "Dark Chocolate": {
-      "water_per_kg": 540.6,
-      "ghg_emissions_per_kg": 46.65,
-      "land_use_per_kg": 68.96,
-      "scarcity_weighted_water_use_per_kg": 2879.2
-    },
-    "Eggs": {
-      "water_per_kg": 577.7,
-      "ghg_emissions_per_kg": 4.67,
-      "land_use_per_kg": 6.27,
-      "scarcity_weighted_water_use_per_kg": 17982.7
-    },
-    "Fish (farmed)": {
-      "water_per_kg": 3691.3,
-      "ghg_emissions_per_kg": 13.63,
-      "land_use_per_kg": 8.41,
-      "scarcity_weighted_water_use_per_kg": 41572.2
-    },
-    "Groundnuts": {
-      "water_per_kg": 1852.3,
-      "ghg_emissions_per_kg": 3.23,
-      "land_use_per_kg": 9.11,
-      "scarcity_weighted_water_use_per_kg": 61797.9
-    },
-    "Lamb & Mutton": {
-      "water_per_kg": 1802.8,
-      "ghg_emissions_per_kg": 39.72,
-      "land_use_per_kg": 369.81,
-      "scarcity_weighted_water_use_per_kg": 141925
-    },
-    "Maize": {
-      "water_per_kg": 215.7,
-      "ghg_emissions_per_kg": 1.7,
-      "land_use_per_kg": 2.94,
-      "scarcity_weighted_water_use_per_kg": 10863.3
-    },
-    "Milk": {
-      "water_per_kg": 628.2,
-      "ghg_emissions_per_kg": 3.15,
-      "land_use_per_kg": 8.95,
-      "scarcity_weighted_water_use_per_kg": 19786.3
-    },
-    "Nuts": {
-      "water_per_kg": 4133.8,
-      "ghg_emissions_per_kg": 0.43,
-      "land_use_per_kg": 12.96,
-      "scarcity_weighted_water_use_per_kg": 229889.8
-    },
-    "Oatmeal": {
-      "water_per_kg": 482.4,
-      "ghg_emissions_per_kg": 2.48,
-      "land_use_per_kg": 7.6,
-      "scarcity_weighted_water_use_per_kg": 18786.2
-    },
-    "Onions & Leeks": {
-      "water_per_kg": 14.3,
-      "ghg_emissions_per_kg": 0.5,
-      "land_use_per_kg": 0.39,
-      "scarcity_weighted_water_use_per_kg": 932
-    },
-    "Other Fruit": {
-      "water_per_kg": 153.5,
-      "ghg_emissions_per_kg": 1.05,
-      "land_use_per_kg": 0.89,
-      "scarcity_weighted_water_use_per_kg": 9533.1
-    },
-    "Other Pulses": {
-      "water_per_kg": 435.7,
-      "ghg_emissions_per_kg": 1.79,
-      "land_use_per_kg": 15.57,
-      "scarcity_weighted_water_use_per_kg": 22477.4
-    },
-    "Other Vegetables": {
-      "water_per_kg": 102.5,
-      "ghg_emissions_per_kg": 0.53,
-      "land_use_per_kg": 0.38,
-      "scarcity_weighted_water_use_per_kg": 4911.4
-    },
-    "Peas": {
-      "water_per_kg": 396.6,
-      "ghg_emissions_per_kg": 0.98,
-      "land_use_per_kg": 7.46,
-      "scarcity_weighted_water_use_per_kg": 27948.2
-    },
-    "Pig Meat": {
-      "water_per_kg": 1795.8,
-      "ghg_emissions_per_kg": 12.31,
-      "land_use_per_kg": 17.36,
-      "scarcity_weighted_water_use_per_kg": 66867.4
-    },
-    "Potatoes": {
-      "water_per_kg": 59.1,
-      "ghg_emissions_per_kg": 0.46,
-      "land_use_per_kg": 0.88,
-      "scarcity_weighted_water_use_per_kg": 2754.2
-    },
-    "Poultry Meat": {
-      "water_per_kg": 660,
-      "ghg_emissions_per_kg": 9.87,
-      "land_use_per_kg": 12.22,
-      "scarcity_weighted_water_use_per_kg": 14177.9
-    },
-    "Prawns (farmed)": {
-      "water_per_kg": 3515.4,
-      "ghg_emissions_per_kg": 26.87,
-      "land_use_per_kg": 2.97,
-      "scarcity_weighted_water_use_per_kg": 127259
-    },
-    "Rice": {
-      "water_per_kg": 2248.4,
-      "ghg_emissions_per_kg": 4.45,
-      "land_use_per_kg": 2.8,
-      "scarcity_weighted_water_use_per_kg": 49576.3
-    },
-    "Root Vegetables": {
-      "water_per_kg": 28.4,
-      "ghg_emissions_per_kg": 0.43,
-      "land_use_per_kg": 0.33,
-      "scarcity_weighted_water_use_per_kg": 929.2
-    },
-    "Soy milk": {
-      "water_per_kg": 27.8,
-      "ghg_emissions_per_kg": 0.98,
-      "land_use_per_kg": 0.66,
-      "scarcity_weighted_water_use_per_kg": 955.6
-    },
-    "Tofu": {
-      "water_per_kg": 148.6,
-      "ghg_emissions_per_kg": 3.16,
-      "land_use_per_kg": 3.52,
-      "scarcity_weighted_water_use_per_kg": 5113.2
-    },
-    "Tomatoes": {
-      "water_per_kg": 369.8,
-      "ghg_emissions_per_kg": 2.09,
-      "land_use_per_kg": 0.8,
-      "scarcity_weighted_water_use_per_kg": 5335.7
-    },
-    "Wheat & Rye": {
-      "water_per_kg": 647.5,
-      "ghg_emissions_per_kg": 1.57,
-      "land_use_per_kg": 3.85,
-      "scarcity_weighted_water_use_per_kg": 33385.6
-    },
-    "Wine": {
-      "water_per_kg": 78.9,
-      "ghg_emissions_per_kg": 1.79,
-      "land_use_per_kg": 1.78,
-      "scarcity_weighted_water_use_per_kg": 1149.3
-    }
+  "Apples": {
+    "water_per_kg": 180.1,
+    "ghg_emissions_per_kg": 0.43,
+    "land_use_per_kg": 0.63,
+    "scarcity_weighted_water_use_per_kg": 12948.6,
+    "weight_per_unit": 0.18,
+    "color": "#FF4C00"
+  },
+  "Bananas": {
+    "water_per_kg": 114.5,
+    "ghg_emissions_per_kg": 0.86,
+    "land_use_per_kg": 1.93,
+    "scarcity_weighted_water_use_per_kg": 661.9,
+    "weight_per_unit": 0.12,
+    "color": "#FFE135"
+  },
+  "Barley": {
+    "water_per_kg": 17.1,
+    "ghg_emissions_per_kg": 1.18,
+    "land_use_per_kg": 1.11,
+    "scarcity_weighted_water_use_per_kg": 696.4,
+    "weight_per_unit": null,
+    "color": "#F1C27D"
+  },
+  "Beef (beef herd)": {
+    "water_per_kg": 1451.2,
+    "ghg_emissions_per_kg": 99.48,
+    "land_use_per_kg": 326.21,
+    "scarcity_weighted_water_use_per_kg": 34732.5,
+    "weight_per_unit": null,
+    "color": "#9E2A2F"
+  },
+  "Beef (dairy herd)": {
+    "water_per_kg": 2714.3,
+    "ghg_emissions_per_kg": 33.3,
+    "land_use_per_kg": 43.24,
+    "scarcity_weighted_water_use_per_kg": 119805.2,
+    "weight_per_unit": null,
+    "color": "#9B111E"
+  },
+  "Beet Sugar": {
+    "water_per_kg": 217.7,
+    "ghg_emissions_per_kg": 1.81,
+    "land_use_per_kg": 1.83,
+    "scarcity_weighted_water_use_per_kg": 9493.3,
+    "weight_per_unit": null,
+    "color": "#9B1B30"
+  },
+  "Berries & Grapes": {
+    "water_per_kg": 419.6,
+    "ghg_emissions_per_kg": 1.53,
+    "land_use_per_kg": 2.41,
+    "scarcity_weighted_water_use_per_kg": 21162.1,
+    "weight_per_unit": 0.005,
+    "color": "#9B59B6"
+  },
+  "Brassicas": {
+    "water_per_kg": 119.4,
+    "ghg_emissions_per_kg": 0.51,
+    "land_use_per_kg": 0.55,
+    "scarcity_weighted_water_use_per_kg": 8455.1,
+    "weight_per_unit": null,
+    "color": "#7D9B0C"
+  },
+  "Cane Sugar": {
+    "water_per_kg": 620.1,
+    "ghg_emissions_per_kg": 3.2,
+    "land_use_per_kg": 2.04,
+    "scarcity_weighted_water_use_per_kg": 16438.6,
+    "weight_per_unit": null,
+    "color": "#F5D300"
+  },
+  "Cassava": {
+    "water_per_kg": 0,
+    "ghg_emissions_per_kg": 1.32,
+    "land_use_per_kg": 1.81,
+    "scarcity_weighted_water_use_per_kg": 0,
+    "weight_per_unit": null,
+    "color": "#D2691E"
+  },
+  "Cheese": {
+    "water_per_kg": 5605.2,
+    "ghg_emissions_per_kg": 23.88,
+    "land_use_per_kg": 87.79,
+    "scarcity_weighted_water_use_per_kg": 180850.6,
+    "weight_per_unit": 0.25,
+    "color": "#F5C542"
+  },
+  "Citrus Fruit": {
+    "water_per_kg": 82.7,
+    "ghg_emissions_per_kg": 0.39,
+    "land_use_per_kg": 0.86,
+    "scarcity_weighted_water_use_per_kg": 4662.7,
+    "weight_per_unit": 0.15,
+    "color": "#FFA500"
+  },
+  "Coffee": {
+    "water_per_kg": 25.9,
+    "ghg_emissions_per_kg": 28.53,
+    "land_use_per_kg": 21.62,
+    "scarcity_weighted_water_use_per_kg": 337,
+    "weight_per_unit": null,
+    "color": "#3E2723"
+  },
+  "Dark Chocolate": {
+    "water_per_kg": 540.6,
+    "ghg_emissions_per_kg": 46.65,
+    "land_use_per_kg": 68.96,
+    "scarcity_weighted_water_use_per_kg": 2879.2,
+    "weight_per_unit": 0.05,
+    "color": "#3E1C41"
+  },
+  "Eggs": {
+    "water_per_kg": 577.7,
+    "ghg_emissions_per_kg": 4.67,
+    "land_use_per_kg": 6.27,
+    "scarcity_weighted_water_use_per_kg": 17982.7,
+    "weight_per_unit": 0.05,
+    "color": "#F4C542"
+  },
+  "Fish (farmed)": {
+    "water_per_kg": 3691.3,
+    "ghg_emissions_per_kg": 13.63,
+    "land_use_per_kg": 8.41,
+    "scarcity_weighted_water_use_per_kg": 41572.2,
+    "weight_per_unit": null,
+    "color": "#00A8A8"
+  },
+  "Groundnuts": {
+    "water_per_kg": 1852.3,
+    "ghg_emissions_per_kg": 3.23,
+    "land_use_per_kg": 9.11,
+    "scarcity_weighted_water_use_per_kg": 61797.9,
+    "weight_per_unit": 0.02,
+    "color": "#D27C22"
+  },
+  "Lamb & Mutton": {
+    "water_per_kg": 1802.8,
+    "ghg_emissions_per_kg": 39.72,
+    "land_use_per_kg": 369.81,
+    "scarcity_weighted_water_use_per_kg": 141925,
+    "weight_per_unit": null,
+    "color": "#9E3C47"
+  },
+  "Maize": {
+    "water_per_kg": 215.7,
+    "ghg_emissions_per_kg": 1.7,
+    "land_use_per_kg": 2.94,
+    "scarcity_weighted_water_use_per_kg": 10863.3,
+    "weight_per_unit": null,
+    "color": "#F4C842"
+  },
+  "Milk": {
+    "water_per_kg": 628.2,
+    "ghg_emissions_per_kg": 3.15,
+    "land_use_per_kg": 8.95,
+    "scarcity_weighted_water_use_per_kg": 19786.3,
+    "weight_per_unit": 1.0,
+    "color": "#F0F8FF"
+  },
+  "Nuts": {
+    "water_per_kg": 4133.8,
+    "ghg_emissions_per_kg": 0.43,
+    "land_use_per_kg": 12.96,
+    "scarcity_weighted_water_use_per_kg": 229889.8,
+    "weight_per_unit": 0.03,
+    "color": "#8B4513"
+  },
+  "Oatmeal": {
+    "water_per_kg": 482.4,
+    "ghg_emissions_per_kg": 2.48,
+    "land_use_per_kg": 7.6,
+    "scarcity_weighted_water_use_per_kg": 18786.2,
+    "weight_per_unit": null,
+    "color": "#C8A97E"
+  },
+  "Onions & Leeks": {
+    "water_per_kg": 14.3,
+    "ghg_emissions_per_kg": 0.5,
+    "land_use_per_kg": 0.39,
+    "scarcity_weighted_water_use_per_kg": 932,
+    "weight_per_unit": 0.1,
+    "color": "#6A4E23"
+  },
+  "Other Fruit": {
+    "water_per_kg": 153.5,
+    "ghg_emissions_per_kg": 1.05,
+    "land_use_per_kg": 0.89,
+    "scarcity_weighted_water_use_per_kg": 9533.1,
+    "weight_per_unit": 0.15,
+    "color": "#FF6F61"
+  },
+  "Other Pulses": {
+    "water_per_kg": 435.7,
+    "ghg_emissions_per_kg": 1.79,
+    "land_use_per_kg": 15.57,
+    "scarcity_weighted_water_use_per_kg": 22477.4,
+    "weight_per_unit": null,
+    "color": "#E0CDA9"
+  },
+  "Other Vegetables": {
+    "water_per_kg": 102.5,
+    "ghg_emissions_per_kg": 0.53,
+    "land_use_per_kg": 0.38,
+    "scarcity_weighted_water_use_per_kg": 4911.4,
+    "weight_per_unit": null,
+    "color": "#7B8D32"
+  },
+  "Peas": {
+    "water_per_kg": 396.6,
+    "ghg_emissions_per_kg": 0.98,
+    "land_use_per_kg": 7.46,
+    "scarcity_weighted_water_use_per_kg": 27948.2,
+    "weight_per_unit": null,
+    "color": "#7CB342"
+  },
+  "Pig Meat": {
+    "water_per_kg": 1795.8,
+    "ghg_emissions_per_kg": 12.31,
+    "land_use_per_kg": 17.36,
+    "scarcity_weighted_water_use_per_kg": 66867.4,
+    "weight_per_unit": null,
+    "color": "#F4A300"
+  },
+  "Potatoes": {
+    "water_per_kg": 59.1,
+    "ghg_emissions_per_kg": 0.46,
+    "land_use_per_kg": 0.88,
+    "scarcity_weighted_water_use_per_kg": 2754.2,
+    "weight_per_unit": 0.1,
+    "color": "#D4AF37"
+  },
+  "Poultry Meat": {
+    "water_per_kg": 660,
+    "ghg_emissions_per_kg": 9.87,
+    "land_use_per_kg": 12.22,
+    "scarcity_weighted_water_use_per_kg": 14177.9,
+    "weight_per_unit": null,
+    "color": "#FFCC00"
+  },
+  "Prawns (farmed)": {
+    "water_per_kg": 3515.4,
+    "ghg_emissions_per_kg": 26.87,
+    "land_use_per_kg": 2.97,
+    "scarcity_weighted_water_use_per_kg": 127259,
+    "weight_per_unit": null,
+    "color": "#1E3A3A"
+  },
+  "Rice": {
+    "water_per_kg": 2248.4,
+    "ghg_emissions_per_kg": 4.45,
+    "land_use_per_kg": 2.8,
+    "scarcity_weighted_water_use_per_kg": 49576.3,
+    "weight_per_unit": null,
+    "color": "#E6D6B3"
+  },
+  "Root Vegetables": {
+    "water_per_kg": 28.4,
+    "ghg_emissions_per_kg": 0.43,
+    "land_use_per_kg": 0.33,
+    "scarcity_weighted_water_use_per_kg": 929.2,
+    "weight_per_unit": 0.1,
+    "color": "#FF8C00"
+  },
+  "Soy milk": {
+    "water_per_kg": 27.8,
+    "ghg_emissions_per_kg": 0.98,
+    "land_use_per_kg": 0.66,
+    "scarcity_weighted_water_use_per_kg": 955.6,
+    "weight_per_unit": 1.0,
+    "color": "#A2C5C0"
+  },
+  "Tofu": {
+    "water_per_kg": 148.6,
+    "ghg_emissions_per_kg": 3.16,
+    "land_use_per_kg": 3.52,
+    "scarcity_weighted_water_use_per_kg": 5113.2,
+    "weight_per_unit": null,
+    "color": "#A8C34D"
+  },
+  "Tomatoes": {
+    "water_per_kg": 369.8,
+    "ghg_emissions_per_kg": 2.09,
+    "land_use_per_kg": 0.8,
+    "scarcity_weighted_water_use_per_kg": 5335.7,
+    "weight_per_unit": 0.1,
+    "color": "#FF6347"
+  },
+  "Wheat & Rye": {
+    "water_per_kg": 647.5,
+    "ghg_emissions_per_kg": 1.57,
+    "land_use_per_kg": 3.85,
+    "scarcity_weighted_water_use_per_kg": 33385.6,
+    "weight_per_unit": null,
+    "color": "#C8A2A8"
+  },
+  "Wine": {
+    "water_per_kg": 78.9,
+    "ghg_emissions_per_kg": 1.79,
+    "land_use_per_kg": 1.78,
+    "scarcity_weighted_water_use_per_kg": 1149.3,
+    "weight_per_unit": 0.75,
+    "color": "#8B0000"
   }
+}

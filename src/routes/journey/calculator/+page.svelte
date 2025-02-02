@@ -1,14 +1,31 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import FoodData from '$lib/data/foods.json';
-	import { Chart, BarController, BarElement, CategoryScale, LinearScale } from 'chart.js';
+	import {
+		Chart,
+		BarController,
+		BarElement,
+		CategoryScale,
+		LinearScale,
+		RadarController,
+		RadialLinearScale,
+		PointElement,
+		LineController,
+		LineElement,
+		type ChartDataset
+	} from 'chart.js';
 	import BrownButton from '$lib/components/BrownButton.svelte';
 	import { onMount } from 'svelte';
+	import { fade } from 'svelte/transition';
+	import ChangeAmount from './ChangeAmount.svelte';
+	import { page } from '$app/stores';
 	let { data }: { data: PageData } = $props();
 
 	let food_to_add = $state('');
 	let chart_canvas: HTMLCanvasElement | undefined = $state();
+	let radar_chart_canvas: HTMLCanvasElement | undefined = $state();
 	let chart: Chart<'bar', number[], string> | undefined = undefined;
+	let radar_chart: Chart<'radar', number[], string> | undefined = undefined;
 
 	type FoodDataType = {
 		[k: string]: {
@@ -26,6 +43,8 @@
 			land_use_per_kg: number;
 			scarcity_weighted_water_use_per_kg: number;
 			kilo_per_year: number;
+			weight_per_unit: number | null;
+			color: string;
 		};
 	};
 
@@ -33,9 +52,26 @@
 
 	let change_amount_of: string | undefined = $state(undefined);
 
+	let food_amount_data: {
+		[k: string]: {
+			grams: number;
+			frequency: number;
+			period_multiplier: number;
+		};
+	} = $state({});
+
 	const add_food = () => {
+		let added_food = food_to_add;
 		selected_food[food_to_add] = { ...FoodData[food_to_add], kilo_per_year: 1 };
 		food_to_add = '';
+		open_change_amount_of(added_food);
+	};
+
+	const save_data = () => {
+		let new_url = new URL($page.url.href);
+		new_url.searchParams.set('selected_food', JSON.stringify(Object.keys(selected_food)));
+		new_url.searchParams.set('food_amount_data', JSON.stringify(food_amount_data));
+		window.history.pushState(null, '', new_url);
 	};
 
 	let change_amount_of_data = $state({
@@ -46,63 +82,70 @@
 		period_multiplier: 1
 	});
 
-	const ANY_NON_DIGIT_REGEX = /\D+/g;
-	$effect(() => {
-		change_amount_of_data.grams_raw = change_amount_of_data.grams_raw.replaceAll(
-			ANY_NON_DIGIT_REGEX,
-			''
-		);
-		const parsed_number = parseInt(change_amount_of_data.grams_raw);
-		if (isNaN(parsed_number)) {
-			change_amount_of_data.grams_raw = change_amount_of_data.grams_raw.slice(0, -1);
-			return;
-		}
-		change_amount_of_data.grams = parsed_number;
-	});
-	$effect(() => {
-		change_amount_of_data.frequency_raw = change_amount_of_data.frequency_raw.replaceAll(
-			ANY_NON_DIGIT_REGEX,
-			''
-		);
-		const parsed_number = parseInt(change_amount_of_data.frequency_raw);
-		if (isNaN(parsed_number)) {
-			change_amount_of_data.frequency_raw = change_amount_of_data.frequency_raw.slice(0, -1);
-			return;
-		}
-		change_amount_of_data.frequency = parsed_number;
-	});
-
-	$inspect(change_amount_of_data);
-	$effect(() => {
-		if (!change_amount_of) return;
-		console.log('hallo');
-		selected_food[change_amount_of].kilo_per_year =
-			(change_amount_of_data.frequency *
-				change_amount_of_data.grams *
-				change_amount_of_data.period_multiplier) /
-			1000;
-		if (chart) {
-			if (!chart.data.labels?.includes(change_amount_of)) chart.data.labels?.push(change_amount_of);
-			chart.data.datasets[0].data[chart.data.labels.indexOf(change_amount_of)] =
-				selected_food[change_amount_of].kilo_per_year;
-			chart.update()
-		}
-		console.log(selected_food[change_amount_of].kilo_per_year);
-	});
-
 	onMount(() => {
-		Chart.register(BarController, BarElement, CategoryScale, LinearScale);
+		Chart.register(
+			BarController,
+			BarElement,
+			CategoryScale,
+			LinearScale,
+			RadarController,
+			RadarController,
+			RadialLinearScale,
+			PointElement,
+			LineController,
+			LineElement
+		);
+		let params = $page.url.searchParams;
+		let param_selected_food = params.get('selected_food');
+		let param_food_amount_data = params.get('food_amount_data');
+		if (param_food_amount_data) {
+			food_amount_data = JSON.parse(param_food_amount_data);
+		}
+		if (param_selected_food) {
+			let selected_food_array = JSON.parse(param_selected_food);
+			let temp_selected_food = {};
+			for (let fi of selected_food_array) {
+				temp_selected_food[fi] = {
+					...FoodData[fi],
+					kilo_per_year:
+						(food_amount_data[fi].frequency *
+							food_amount_data[fi].grams *
+							food_amount_data[fi].period_multiplier) /
+						1000
+				};
+			}
+			selected_food = temp_selected_food;
+			render_chart();
+		}
 	});
 
-	const close_change_amount_of = () => {
-		change_amount_of = undefined;
-		change_amount_of_data = {
-			grams: 0,
-			grams_raw: '',
-			frequency_raw: '',
-			frequency: 0,
-			period_multiplier: 1
-		};
+	$inspect(selected_food);
+
+	const open_change_amount_of = (food: string) => {
+		if (food_amount_data[food]) {
+			change_amount_of_data = {
+				grams: food_amount_data[food].grams,
+				grams_raw: food_amount_data[food].grams.toString(),
+				frequency_raw: food_amount_data[food].frequency.toString(),
+				frequency: food_amount_data[food].frequency,
+				period_multiplier: food_amount_data[food].period_multiplier
+			};
+		} else {
+			change_amount_of_data = {
+				grams: 0,
+				grams_raw: '',
+				frequency_raw: '',
+				frequency: 0,
+				period_multiplier: 365
+			};
+		}
+		if (selected_food[food].weight_per_unit) {
+			change_amount_of_data.grams = parseInt(
+				(selected_food[food].weight_per_unit * 1000).toFixed(0)
+			);
+			change_amount_of_data.grams_raw = String(change_amount_of_data.grams);
+		}
+		change_amount_of = food;
 	};
 
 	const render_chart = () => {
@@ -112,82 +155,130 @@
 				labels: Object.keys(selected_food),
 				datasets: [
 					{
-						label: '# of kg',
+						label: 'm² of land',
 						borderWidth: 1,
 						data: Object.values(selected_food).map((d) => {
-							return d.kilo_per_year;
+							return d.kilo_per_year * d.land_use_per_kg;
+						}),
+						backgroundColor: Object.values(selected_food).map((d) => {
+							return d.color + '95';
 						})
 					}
 				]
 			}
 		});
 	};
+	/*
+	const render_radar_chart = () => {
+		let datasets: ChartDataset[] = [];
+		for (const [food_name, data] of Object.entries(selected_food)) {
+			datasets.push({
+				label: food_name,
+				data: [
+					data.water_per_kg,
+					data.ghg_emissions_per_kg,
+					data.land_use_per_kg
+					// data.scarcity_weighted_water_use_per_kg
+				],
+				backgroundColor: data.color
+			});
+		}
+		if (radar_chart) {
+			radar_chart.destroy();
+			radar_chart = undefined;
+		}
+
+		radar_chart = new Chart(radar_chart_canvas, {
+			type: 'radar',
+			data: {
+				labels: ['Water', 'Greenhouse Gas Emissions', 'Land usage', 'Scarcity Water'],
+				datasets
+			}
+		});
+	};
+	*/
 </script>
 
-<h1>
-	Hi {data.name}! let's calculate your basic food emissions, like land requirement, water usage and
-	greenhouse gas emissions.
-</h1>
-
-<div class="grid grid-cols-2 lg:grid-cols-2">
-	<div class="flex flex-col">
-		<div class="grid grid-cols-3">
-			{#each Object.entries(selected_food) as [food, food_data]}
-				<p>{food}</p>
-				<p>{food_data.kilo_per_year}kg/year</p>
-				<BrownButton
-					on:click={() => {
-						change_amount_of = food;
-					}}>Change amount</BrownButton
-				>
-			{/each}
-		</div>
-		<div class="flex flex-row">
-			<select bind:value={food_to_add}>
-				{#each Object.keys(FoodData) as food_key}
-					<option value={food_key}>{food_key}</option>
-				{/each}
-			</select>
-			<BrownButton on:click={add_food}>Add!</BrownButton>
-		</div>
-		<BrownButton on:click={render_chart}>Update chart</BrownButton>
+<div class="min-h-screen">
+	<div class="mx-2 flex flex-col">
+		<h1 class="mx-auto text-6xl">Calculate food data</h1>
+		<p class="mx-auto">
+			Hi {data.name}! let's calculate your basic food emissions, like land requirement, water usage
+			and greenhouse gas emissions.
+		</p>
+		<p>
+			You can set all the food you eat regularly here. Select them in the dropdown on the left and
+			click "add".
+		</p>
 	</div>
-	<div>
-		<canvas bind:this={chart_canvas}></canvas>
+	<div class="m-2 grid grid-rows-2 lg:grid-cols-2">
+		<div class="flex flex-col">
+			<div class="flex flex-col gap-2">
+				{#each Object.entries(selected_food) as [food, food_data]}
+					<div class="rounded shadow-lg bg-black/10 p-2">
+						<p class="text-center">{food}</p>
+						<p>
+							You eat {food_data.kilo_per_year}kg/year and it requires {food_data.land_use_per_kg}m²/kg
+							of land.
+						</p>
+						<div class="p-1">
+							<BrownButton
+								on:click={() => {
+									open_change_amount_of(food);
+								}}>Change amount</BrownButton
+							>
+						</div>
+					</div>
+				{/each}
+			</div>
+			<div class="m-2 flex flex-row gap-2">
+				<select bind:value={food_to_add}>
+					{#each Object.keys(FoodData) as food_key}
+						<option value={food_key}>{food_key}</option>
+					{/each}
+				</select>
+				<BrownButton on:click={add_food} disabled={!food_to_add}>Add!</BrownButton>
+			</div>
+		</div>
+		<div class="mx-2">
+			<canvas bind:this={chart_canvas}></canvas>
+			<p>
+				The chart above shows the land usage for the different foods you've selected over the year.
+				This should make it easier for you to see where you can save some land usage.
+			</p>
+			<p>
+				That means that your eating habits require {Object.values(selected_food)
+					.reduce(
+						(acc, { kilo_per_year, land_use_per_kg }) => acc + kilo_per_year * land_use_per_kg,
+						0
+					)
+					.toFixed(0)}m² of land. Just for you. But it also emits {Object.values(selected_food)
+					.reduce(
+						(acc, { kilo_per_year, ghg_emissions_per_kg }) =>
+							acc + kilo_per_year * ghg_emissions_per_kg,
+						0
+					)
+					.toFixed(0)}kg of Greenhouse Gases every year. And you also require {Object.values(
+					selected_food
+				)
+					.reduce((acc, { kilo_per_year, water_per_kg }) => acc + kilo_per_year * water_per_kg, 0)
+					.toFixed(0)}l of water.
+			</p>
+			<!-- <BrownButton on:click={render_radar_chart}>Render Radar graph</BrownButton> -->
+			<!-- <canvas bind:this={radar_chart_canvas}></canvas> -->
+			<BrownButton on:click={save_data}>Save data</BrownButton>
+			<p>
+				The "Save data" button saves the data into the URL, so if you close this tab, all your data
+				is gone, too. If you want to come back later, click the save button and add a bookmark.
+			</p>
+		</div>
 	</div>
 </div>
-
-{#if change_amount_of}
-	<div class="fixed left-0 top-0 z-20 flex h-screen w-screen bg-black/60">
-		<div class="m-10 flex w-full flex-col rounded-lg bg-white/80 p-2 lg:m-auto lg:h-2/3 lg:w-1/3">
-			<h2 class="marck-script mx-auto text-5xl text-center">Change the amount of {change_amount_of}</h2>
-			<p class="mx-auto mt-1">Set how much {change_amount_of} you eat!</p>
-			<div class="flex w-full flex-row place-items-center align-middle">
-				I eat <span
-					bind:innerHTML={change_amount_of_data.grams_raw}
-					role="textbox"
-					contenteditable
-					class="ml-1 inline-block w-fit min-w-6 border-b-2 border-l-0 border-r-0 border-t-0 border-dotted border-black bg-transparent p-0 outline-none"
-				></span>g of {change_amount_of} every
-				<span
-					role="textbox"
-					bind:innerHTML={change_amount_of_data.frequency_raw}
-					contenteditable
-					class="ml-1 inline-block w-fit min-w-6 border-b-2 border-l-0 border-r-0 border-t-0 border-dotted border-black bg-transparent p-0 outline-none"
-				></span>
-				<select
-					class="w-24 border-0 bg-transparent p-0 px-2 focus:outline-none"
-					bind:value={change_amount_of_data.period_multiplier}
-				>
-					<option value={365}>Days</option>
-					<option value={52}>Weeks</option>
-					<option value={12}>Months</option>
-					<option value={1}>Years</option>
-				</select>
-			</div>
-			<div>
-				<BrownButton on:click={close_change_amount_of}>Save and close</BrownButton>
-			</div>
-		</div>
-	</div>
-{/if}
+<ChangeAmount
+	bind:change_amount_of
+	bind:change_amount_of_data
+	{food_amount_data}
+	bind:chart
+	bind:selected_food
+	init_chart={render_chart}
+/>
