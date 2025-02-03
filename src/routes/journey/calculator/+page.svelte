@@ -16,16 +16,15 @@
 	} from 'chart.js';
 	import BrownButton from '$lib/components/BrownButton.svelte';
 	import { onMount } from 'svelte';
-	import { fade } from 'svelte/transition';
 	import ChangeAmount from './ChangeAmount.svelte';
 	import { page } from '$app/stores';
 	let { data }: { data: PageData } = $props();
 
 	let food_to_add = $state('');
 	let chart_canvas: HTMLCanvasElement | undefined = $state();
-	let radar_chart_canvas: HTMLCanvasElement | undefined = $state();
+	// let radar_chart_canvas: HTMLCanvasElement | undefined = $state();
 	let chart: Chart<'bar', number[], string> | undefined = undefined;
-	let radar_chart: Chart<'radar', number[], string> | undefined = undefined;
+	// let radar_chart: Chart<'radar', number[], string> | undefined = undefined;
 
 	type FoodDataType = {
 		[k: string]: {
@@ -271,6 +270,7 @@
 				The "Save data" button saves the data into the URL, so if you close this tab, all your data
 				is gone, too. If you want to come back later, click the save button and add a bookmark.
 			</p>
+			<BrownButton href="/journey/summary">View summary</BrownButton>
 		</div>
 	</div>
 </div>

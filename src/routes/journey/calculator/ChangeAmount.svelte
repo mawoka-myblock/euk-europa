@@ -112,7 +112,7 @@
 		transition:fade={{ duration: 100 }}
 	>
 		<div class="m-2 flex w-full flex-col rounded-lg bg-white/90 p-2 lg:m-auto lg:h-2/3 lg:w-1/3">
-			<h2 class="marck-script mx-auto text-center text-5xl">
+			<h2 class="mx-auto text-center text-5xl">
 				Change the amount of {change_amount_of}
 			</h2>
 			<p class="mx-auto mt-1">Set how much {change_amount_of} you eat!</p>

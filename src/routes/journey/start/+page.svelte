@@ -13,7 +13,7 @@
 	{#if screen === 0}
 		<div class="m-auto flex flex-col items-center gap-2">
 			<h2 class="text-3xl">What's your name?</h2>
-			<p>Don't worry, your name wil solely be saved in your browser.</p>
+			<p>Don't worry, your name will solely be saved in your browser.</p>
 			<input bind:value={data.name} class="rounded p-1 text-center text-lg" />
 			<div>
 				<BrownButton on:click={() => (screen = 1)} disabled={data.name.length < 2}

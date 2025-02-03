@@ -3,8 +3,8 @@
 
 <h1 class="marck-script text-center text-8xl">Sources</h1>
 
-<div class="flex flex-col min-h-screen">
-	<div class="mx-4 lg:w-1/3 lg:mx-auto">
+<div class="flex min-h-screen flex-col">
+	<div class="mx-4 lg:mx-auto lg:w-1/3">
 		<p>
 			The main data used in the calculator has been taken from <a
 				href="https://ourworldindata.org/agricultural-land-by-global-diets"
@@ -28,7 +28,12 @@
 				href="https://doi.org/10.1016/j.gloenvcha.2016.09.005"
 				target="_blank"
 				class="underline">Human appropriation of land for food: The role of diet</a
-			> (https://doi.org/10.1016/j.gloenvcha.2016.09.005)
+			>
+			(https://doi.org/10.1016/j.gloenvcha.2016.09.005). Data from
+			<a
+				href="https://ourworldindata.org/grapher/share-of-global-habitable-land-needed-for-agriculture-if-everyone-had-the-diet-of?tab=table"
+				target="_blank">OurWorldInData</a
+			> has also been incorporated as the sources fpor the different HALF indexes per country
 		</p>
 	</div>
 </div>
