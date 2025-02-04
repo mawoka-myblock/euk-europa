@@ -11,8 +11,7 @@
 		RadialLinearScale,
 		PointElement,
 		LineController,
-		LineElement,
-		type ChartDataset
+		LineElement
 	} from 'chart.js';
 	import BrownButton from '$lib/components/BrownButton.svelte';
 	import { onMount } from 'svelte';
@@ -214,7 +213,7 @@
 		<div class="flex flex-col">
 			<div class="flex flex-col gap-2">
 				{#each Object.entries(selected_food) as [food, food_data]}
-					<div class="rounded shadow-lg bg-black/10 p-2">
+					<div class="rounded bg-black/10 p-2 shadow-lg">
 						<p class="text-center">{food}</p>
 						<p>
 							You eat {food_data.kilo_per_year}kg/year and it requires {food_data.land_use_per_kg}m²/kg
@@ -270,7 +269,9 @@
 				The "Save data" button saves the data into the URL, so if you close this tab, all your data
 				is gone, too. If you want to come back later, click the save button and add a bookmark.
 			</p>
-			<BrownButton href="/journey/summary">View summary</BrownButton>
+			<div>
+				<BrownButton href="/journey/summary" flex>View summary</BrownButton>
+			</div>
 		</div>
 	</div>
 </div>

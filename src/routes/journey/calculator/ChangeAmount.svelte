@@ -111,12 +111,12 @@
 		class="fixed left-0 top-0 z-20 flex h-screen w-screen bg-black/60"
 		transition:fade={{ duration: 100 }}
 	>
-		<div class="m-2 flex w-full flex-col rounded-lg bg-white/90 p-2 lg:m-auto lg:h-2/3 lg:w-1/3">
+		<div class="m-2 flex w-full flex-col rounded-lg bg-white/90 p-2 xl:m-auto xl:h-2/3 xl:w-1/3">
 			<h2 class="mx-auto text-center text-5xl">
 				Change the amount of {change_amount_of}
 			</h2>
 			<p class="mx-auto mt-1">Set how much {change_amount_of} you eat!</p>
-			<div class="mx-auto flex w-fit flex-row place-items-center align-middle">
+			<div class="mx-auto flex w-fit md:flex-row flex-col place-items-center align-middle">
 				I eat <span
 					bind:innerHTML={change_amount_of_data.grams_raw}
 					role="textbox"

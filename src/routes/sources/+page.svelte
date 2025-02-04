@@ -32,8 +32,17 @@
 			(https://doi.org/10.1016/j.gloenvcha.2016.09.005). Data from
 			<a
 				href="https://ourworldindata.org/grapher/share-of-global-habitable-land-needed-for-agriculture-if-everyone-had-the-diet-of?tab=table"
+				class="underline"
 				target="_blank">OurWorldInData</a
 			> has also been incorporated as the sources fpor the different HALF indexes per country
+		</p>
+		<p>
+			Data about the current global land usage regarding agriculture has been source from
+			OurWorldInData: <a
+				href="https://ourworldindata.org/global-land-for-agriculture"
+				class="underline"
+				target="_blank">ourworldindata.org/global-land-for-agriculture</a
+			>
 		</p>
 	</div>
 </div>
