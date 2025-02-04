@@ -2,7 +2,6 @@
 	import type { PageData } from './$types';
 	import { countries } from 'country-data';
 	import half_index_data from '$lib/data/half_index_by_iso_3_country.json5';
-	import WhatMeme from '$lib/media/what-meme.webp';
 	import { createTippy } from 'svelte-tippy';
 	import BrownButton from '$lib/components/BrownButton.svelte';
 	import { Chart, BarController, BarElement, CategoryScale, LinearScale, Tooltip } from 'chart.js';
@@ -201,7 +200,7 @@
 			</p>
 		{/if}
 
-		<canvas bind:this={chart_canvas}></canvas>
+		<canvas class="mx-4" bind:this={chart_canvas}></canvas>
 		<div class="m-4 mx-auto text-2xl">
 			<BrownButton href="/journey/calculator?name={user_name}&country={data.country}"
 				>Continue</BrownButton

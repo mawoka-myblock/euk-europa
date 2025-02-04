@@ -44,5 +44,12 @@
 				target="_blank">ourworldindata.org/global-land-for-agriculture</a
 			>
 		</p>
+		<p>
+			EU's land usage by agriculture for each country has been provided by <a
+				href="https://ec.europa.eu/eurostat/statistics-explained/index.php?title=File:Fig4Rev_Land_belonging_to_farms_by_type_of_land_(%25_share_of_total_land_area,_2020).png"
+				target="_blank"
+				class="underline">eurostat</a
+			>.
+		</p>
 	</div>
 </div>

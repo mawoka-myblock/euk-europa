@@ -238,7 +238,7 @@
 				<BrownButton on:click={add_food} disabled={!food_to_add}>Add!</BrownButton>
 			</div>
 		</div>
-		<div class="mx-2">
+		<div class="mx-4">
 			<canvas bind:this={chart_canvas}></canvas>
 			<p>
 				The chart above shows the land usage for the different foods you've selected over the year.
@@ -270,7 +270,7 @@
 				is gone, too. If you want to come back later, click the save button and add a bookmark.
 			</p>
 			<div>
-				<BrownButton href="/journey/summary" flex>View summary</BrownButton>
+				<BrownButton href="/journey/summary" on:click={save_data} flex>View summary</BrownButton>
 			</div>
 		</div>
 	</div>
