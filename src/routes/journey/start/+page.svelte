@@ -3,7 +3,7 @@
 	import half_index_data from '$lib/data/half_index_by_iso_3_country.json5';
 
 	let data = $state({
-		name: 'dsadsadsdas', // Null this
+		name: '', // Null this
 		country: 'DE'
 	});
 
