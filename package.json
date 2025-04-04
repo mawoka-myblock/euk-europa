@@ -43,7 +43,7 @@
 		"tippy.js": "^6.3.7",
 		"typescript": "^5.0.0",
 		"typescript-eslint": "^8.0.0",
-		"vite": "^6.0.0",
+		"vite": "^6.0.14",
 		"vite-plugin-json5": "^1.1.6"
 	},
 	"dependencies": {
