@@ -28,13 +28,12 @@
 				href="https://doi.org/10.1016/j.gloenvcha.2016.09.005"
 				target="_blank"
 				class="underline">Human appropriation of land for food: The role of diet</a
-			>
-			(https://doi.org/10.1016/j.gloenvcha.2016.09.005). Data from
+			>. Data from
 			<a
 				href="https://ourworldindata.org/grapher/share-of-global-habitable-land-needed-for-agriculture-if-everyone-had-the-diet-of?tab=table"
 				class="underline"
 				target="_blank">OurWorldInData</a
-			> has also been incorporated as the sources fpor the different HALF indexes per country
+			> has also been incorporated as the sources for the different HALF indexes per country
 		</p>
 		<p>
 			Data about the current global land usage regarding agriculture has been source from
